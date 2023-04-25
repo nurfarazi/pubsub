@@ -15,6 +15,7 @@ public class UserService
     // Constructor
     public UserService()
     {
+        userEvent.SubscribeToUserCreatedEvent(UserCreatedBySub);
     }
 
     public void CreateAsync(User user)
@@ -25,6 +26,12 @@ public class UserService
 
         Console.WriteLine($"User {user.Name} created");
         OnUserCreated(new UserEventArgs(user));
+    }
+    
+    // method trigger if Created created 
+    public void UserCreatedBySub(object sender, UserEventArgs e)
+    {
+        Console.WriteLine($"User {e.User.Name} created");
     }
     
     // Method that raises the userCreated event
