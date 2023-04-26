@@ -1,13 +1,25 @@
-﻿namespace PubSub.Services;
+﻿using System.Xml;
+using PubSub.Events;
+
+namespace PubSub.Services;
 
 public class NotificationService
 {
+    private UserEvents userEvents = UserEvents.GetInstance();
+
     public NotificationService()
     {
+        Subscribe();
     }
 
-    public void Send(string message)
+    public void Subscribe()
     {
-        Console.WriteLine(message);
+        userEvents.SubscribeToUserCreatedEvent(Send);
+    }
+
+
+    public void Send(object sender, UserEventArgs userEventArgs)
+    {
+        Console.WriteLine($"Notification sent to {userEventArgs.User.Name}");
     }
 }

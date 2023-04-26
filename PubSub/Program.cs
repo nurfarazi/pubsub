@@ -1,3 +1,4 @@
+using PubSub.Events;
 using PubSub.Services;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -9,9 +10,11 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddSingleton<UserService>();
-builder.Services.AddSingleton<NotificationService>();
-builder.Services.AddSingleton<LoggerService>();
+builder.Services.AddScoped<UserService>();
+builder.Services.AddScoped<NotificationService>();
+builder.Services.AddScoped<LoggerService>();
+
+builder.Services.AddSingleton<UserEvents>();
 
 var app = builder.Build();
 

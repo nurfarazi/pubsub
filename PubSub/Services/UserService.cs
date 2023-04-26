@@ -9,23 +9,21 @@ public class UserService
     // List of users
     private List<User> _users = new();
     
-    // Instance of the UserEvents class
-    private UserEvents userEvent = new UserEvents();
+    // Get UserEvents without creating a new instance (Singleton)
+    
+    private UserEvents userEvents = UserEvents.GetInstance();
 
     // Constructor
     public UserService()
     {
-        userEvent.SubscribeToUserCreatedEvent(UserCreatedBySub);
     }
 
     public void CreateAsync(User user)
     {
         // trigger and event using userEvent.cs
-        // and add users to list
         _users.Add(new User { Name = "John Doe" });
 
         Console.WriteLine($"User {user.Name} created");
-        OnUserCreated(new UserEventArgs(user));
     }
     
     // method trigger if Created created 
@@ -37,23 +35,24 @@ public class UserService
     // Method that raises the userCreated event
     protected virtual void OnUserCreated(UserEventArgs e)
     {
-        userEvent.OnUserCreated(e);
+        userEvents.OnUserCreated(e);
     }
 
     // Method to subscribe to the userCreated event
     public void SubscribeToUserCreatedEvent(UserEvents.UserCreatedEventHandler eventHandler)
     {
-        userEvent.SubscribeToUserCreatedEvent(eventHandler);
+        userEvents.SubscribeToUserCreatedEvent(eventHandler);
     }
 
     // Method to unsubscribe from the userCreated event
     public void UnsubscribeFromUserCreatedEvent(UserEvents.UserCreatedEventHandler eventHandler)
     {
-        userEvent.UnsubscribeFromUserCreatedEvent(eventHandler);
+        userEvents.UnsubscribeFromUserCreatedEvent(eventHandler);
     }
 
     public IActionResult UpdateAsync(User user)
     {
+        OnUserCreated(new UserEventArgs(user));
         Console.WriteLine($"User {user.Name} updated");
         return new OkResult();
     }

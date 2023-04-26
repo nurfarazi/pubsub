@@ -4,6 +4,19 @@ namespace PubSub.Events
 {
     public class UserEvents
     {
+        // Create an instance also check for instance so that it does not duplicate (singleton)
+        private static UserEvents _instance;
+
+        public static UserEvents GetInstance()
+        {
+            if (_instance == null)
+            {
+                _instance = new UserEvents();
+            }
+
+            return _instance;
+        }
+
         // Define the delegate type for the userCreated event.
         public delegate void UserCreatedEventHandler(object sender, UserEventArgs e);
 
