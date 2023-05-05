@@ -1,0 +1,71 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/nurfarazi/git/test/pubsub/VideoMerger/VideoMerger.csproj": {}
+  },
+  "projects": {
+    "/Users/nurfarazi/git/test/pubsub/VideoMerger/VideoMerger.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/nurfarazi/git/test/pubsub/VideoMerger/VideoMerger.csproj",
+        "projectName": "VideoMerger",
+        "projectPath": "/Users/nurfarazi/git/test/pubsub/VideoMerger/VideoMerger.csproj",
+        "packagesPath": "/Users/nurfarazi/.nuget/packages/",
+        "outputPath": "/Users/nurfarazi/git/test/pubsub/VideoMerger/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/nurfarazi/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "FFmpeg.Net": {
+              "target": "Package",
+              "version": "[1.1.0, )"
+            },
+            "Xabe.FFmpeg": {
+              "target": "Package",
+              "version": "[5.2.6, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.203/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

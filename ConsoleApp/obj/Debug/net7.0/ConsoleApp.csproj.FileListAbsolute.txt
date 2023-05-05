@@ -1,0 +1,15 @@
+/Users/nurfarazi/git/test/pubsub/ConsoleApp/bin/Debug/net7.0/ConsoleApp
+/Users/nurfarazi/git/test/pubsub/ConsoleApp/bin/Debug/net7.0/ConsoleApp.deps.json
+/Users/nurfarazi/git/test/pubsub/ConsoleApp/bin/Debug/net7.0/ConsoleApp.runtimeconfig.json
+/Users/nurfarazi/git/test/pubsub/ConsoleApp/bin/Debug/net7.0/ConsoleApp.dll
+/Users/nurfarazi/git/test/pubsub/ConsoleApp/bin/Debug/net7.0/ConsoleApp.pdb
+/Users/nurfarazi/git/test/pubsub/ConsoleApp/obj/Debug/net7.0/ConsoleApp.csproj.AssemblyReference.cache
+/Users/nurfarazi/git/test/pubsub/ConsoleApp/obj/Debug/net7.0/ConsoleApp.GeneratedMSBuildEditorConfig.editorconfig
+/Users/nurfarazi/git/test/pubsub/ConsoleApp/obj/Debug/net7.0/ConsoleApp.AssemblyInfoInputs.cache
+/Users/nurfarazi/git/test/pubsub/ConsoleApp/obj/Debug/net7.0/ConsoleApp.AssemblyInfo.cs
+/Users/nurfarazi/git/test/pubsub/ConsoleApp/obj/Debug/net7.0/ConsoleApp.csproj.CoreCompileInputs.cache
+/Users/nurfarazi/git/test/pubsub/ConsoleApp/obj/Debug/net7.0/ConsoleApp.dll
+/Users/nurfarazi/git/test/pubsub/ConsoleApp/obj/Debug/net7.0/refint/ConsoleApp.dll
+/Users/nurfarazi/git/test/pubsub/ConsoleApp/obj/Debug/net7.0/ConsoleApp.pdb
+/Users/nurfarazi/git/test/pubsub/ConsoleApp/obj/Debug/net7.0/ConsoleApp.genruntimeconfig.cache
+/Users/nurfarazi/git/test/pubsub/ConsoleApp/obj/Debug/net7.0/ref/ConsoleApp.dll
